@@ -2,6 +2,7 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weather/weather.dart';
+import 'package:weatherly/env.dart';
 
 sealed class WeatherState extends Equatable {
   const WeatherState();
@@ -47,7 +48,7 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
       emit(WeatherStateLoading());
       try {
         WeatherFactory weatherFactory =
-            WeatherFactory('_apiKey', language: Language.ENGLISH);
+            WeatherFactory(EnvConfig.apikey, language: Language.ENGLISH);
         final Weather weather = await weatherFactory.currentWeatherByLocation(
             event.position.latitude, event.position.longitude);
         emit(WeatherStateSuccess(weather));
