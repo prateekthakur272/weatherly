@@ -11,9 +11,9 @@ const onSurfaceLight = Colors.black;
 final errorLight = Colors.red.shade400;
 
 
-final primaryDark = Colors.deepPurple.shade300;
+const primaryDark = Colors.orange;
 const onPrimaryDark = Colors.white;
-final secondaryDark = Colors.yellow.shade400;
+final secondaryDark = Colors.red.shade300;
 const onSecondaryDark = Colors.black;
 final backgroundDark = Colors.grey.shade200;
 const onBackgroundDark = Colors.black;
