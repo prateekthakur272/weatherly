@@ -1,5 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:weatherly/constants/constants.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -58,6 +60,87 @@ class _HomeScreenState extends State<HomeScreen> {
 									decoration: const BoxDecoration(color: Colors.transparent),
 								),
 							),
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const Text('📍 Khandwa, India', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w300),),
+                    const Text('Good Morning', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
+                    Image.asset('assets/1.png'),
+                    const Text('32°C', style: TextStyle(fontSize: 56, fontWeight:FontWeight.w600,)),
+                    const Text('Thunderstorm', style: TextStyle(fontSize: 32, fontWeight:FontWeight.w500,)),
+                    const Text('Wednesday 20 • 03.37pm', style: TextStyle(fontSize: 16, fontWeight:FontWeight.w300,)),
+                    space24,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset('assets/11.png', scale: 8,),
+                            space4,
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Sunrise', style: TextStyle(fontWeight: FontWeight.w300),),
+                                Text('5.46am', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ],
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Image.asset('assets/12.png', scale: 8,),
+                            space4,
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Sunset', style: TextStyle(fontWeight: FontWeight.w300),),
+                                Text('7.31pm', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                    space4,
+                    const Divider(),
+                    space4,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Row(
+                          children: [
+                            Image.asset('assets/13.png', scale: 8,),
+                            space4,
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Temp Max', style: TextStyle(fontWeight: FontWeight.w300),),
+                                Text('38°C', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ],
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Image.asset('assets/14.png', scale: 8,),
+                            space4,
+                            const Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Temp Min', style: TextStyle(fontWeight: FontWeight.w300),),
+                                Text('30°C', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),),
+                              ],
+                            )
+                          ],
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              )
 						],
 					),
 				),
